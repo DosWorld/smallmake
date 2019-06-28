@@ -68,10 +68,11 @@ Some of this tools you can download for free from
 
 ### Exesize
 
-By default, VAL-linked put 0xFFFF into `max memory` field (in exe-header).
+By default, VAL-linker put 0xFFFF into `max memory` field (in exe-header).
 It is means - DOS will allocate all available memory for programm, when
 start it. It is bad choice, if you want start execute another programm.
-So, I wrote `exesize` - patch exe header to avoid this problem.
+Child process will be crashed with "no memory" error. So, I wrote
+`exesize.exe` - patch for MAKE's exe header, to avoid this problem.
 
 ## Restrictions
 
