@@ -73,4 +73,4 @@ Max MAKEFILE size - 16KB
 
 # License
 
-Public domain
+Public domain (The Unlicense)
