@@ -74,7 +74,9 @@ It is means - DOS will allocate all available memory for programm, when
 start it. It is bad choice, if you want start execute another programm.
 Child process will be crashed with "no memory" error. So, I wrote
 `exesize.exe` - patch for `MAKE`'s exe header, to avoid this problem.
-This patch must be applied to `make.exe` after linking.
+This patch must be applied to fresh `make.exe` after linking. Here is
+no sense apply this patch more then once (second time - it will change
+nothing).
 
 ## Restrictions
 
