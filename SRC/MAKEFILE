@@ -1,0 +1,56 @@
+#
+# This is makefile for MAKE utility
+#
+
+all: make.exe
+
+install: make.exe
+    copy make.exe ..\bin\make.exe
+
+clean:
+    del *.obj
+    del *.asm
+
+#
+# Main file
+#
+
+make.exe: make.obj exec.obj str.obj target.obj fio.obj env.obj exesize.exe
+    val make.obj+str.obj+target.obj+exec.obj+env.obj+fio.obj,make.exe,,clib.lib
+    upx -9 --8086 make.exe
+    exesize make.exe
+#
+# Object files
+#
+
+fio.obj: fio.c
+    cc  fio.c -m -a -p
+    asm fio.asm
+
+make.obj: make.c
+    cc  make.c -m -a -p
+    asm make.asm
+
+str.obj: str.c
+    cc str.c -m -a -p
+    asm str.asm
+
+exec.obj: exec.c
+    cc exec.c -m -a -p
+    asm exec.asm
+
+target.obj: target.c
+    cc target.c -m -a -p
+    asm target.asm
+
+env.obj: env.c
+    cc env.c -m -a -p
+    asm env.asm
+
+exesize.exe: exesize.c
+    cc exesize.c -m -a -p
+    asm exesize.asm
+    val exesize.obj,exesize.exe,,clib.lib
+    upx -9 --8086 exesize.exe
+    del exesize.asm
+    del exesize.obj
