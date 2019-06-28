@@ -46,6 +46,7 @@ depends to directory order in PATH.
 ## Restrictions
 
 Max target count - 1024
+
 Max MAKEFILE size - 16KB
 
 # License
