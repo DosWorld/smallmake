@@ -22,11 +22,16 @@ By default, start build first target.
 
 By default, MAKE start search EXE and COM in current
 directory and in PATH.
+
 If found - run.
+
 If not found (it could be BAT or built-in command like
 COPY or DEL) - try execute
 
      COMMAND.COM /C build_command
+
+(Path to COMMAND.COM will be received from COMSPEC env variable)
+
 
 So, if You wrote "cc mycool.c" it could start
 
@@ -36,7 +41,7 @@ or
 
      K:\SMALLC22\CC.EXE mycool.c
 
-dependes to directory order in PATH.
+depends to directory order in PATH.
 
 ## Restrictions
 
