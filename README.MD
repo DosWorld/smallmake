@@ -60,7 +60,7 @@ Must be in PATH:
 * VAL (linker)
 * UPX (executable file compressor)
 
-Some of this tools you can download from https://github.com/DosWorld/smallc
+Some of this tools you can download for free from https://github.com/DosWorld/smallc
 
 ## Restrictions
 
