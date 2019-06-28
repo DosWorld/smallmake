@@ -18,7 +18,7 @@ Source code 100% wroten in Small C (with Assembler inlines).
 
 By default, start build first target.
 
-## Small notes about command execution in MS-DOS.
+## Notes about command execution in MS-DOS.
 
 By default, MAKE start search EXE and COM in current
 directory and in PATH.
