@@ -8,6 +8,7 @@ MAKE for DOS 16-bit (real mode). DJGPP offers just DPMI-based
 tools.
 
 This MAKE does not support variables - smallest as possible.
+MAKE is real small - just 5KB on your hard drive!
 
 Source code 100% wroten in Small C (with Assembler inlines).
 
