@@ -47,6 +47,21 @@ or
 
 depends to directory order in PATH.
 
+## How to build
+
+Just type
+
+    make
+
+Must be in PATH:
+
+* SmallC 2.2
+* ASM (Small Assembler)
+* VAL (linker)
+* UPX (executable file compressor)
+
+Some of this tools you can download from https://github.com/DosWorld/smallc
+
 ## Restrictions
 
 Max target count - 1024
