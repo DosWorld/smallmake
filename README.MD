@@ -4,7 +4,8 @@ There is MAKE tool for Small C by J. Hendrix.
 Good compiler, but toolchain definitly must be enhanced.
 
 The second reason to recreate this utility - absent
-MAKE for DOS 16-bit (real mode). DJGPP offers just DPMI tools.
+MAKE for DOS 16-bit (real mode). DJGPP offers just DPMI-based
+tools.
 
 This MAKE does not support variables - smallest as possible.
 
