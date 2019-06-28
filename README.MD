@@ -1,14 +1,14 @@
 # Make
 
-There is MAKE tool for Small C by J. Hendrix.
+There is `MAKE` tool for `Small C by J. Hendrix`.
 Good compiler, but toolchain definitly must be enhanced.
 
 The second reason to recreate this utility - absent
-MAKE for DOS 16-bit (real mode). DJGPP offers just DPMI-based
+`MAKE` for DOS 16-bit (real mode). DJGPP offers just DPMI-based
 tools.
 
-This MAKE does not support variables - smallest as possible.
-MAKE is real small - just 5KB on your hard drive!
+This `MAKE` does not support variables - smallest as possible.
+`MAKE` is real small - just 5KB on your hard drive!
 
 Source code 100% wroten in Small C (with Assembler inlines).
 
@@ -26,17 +26,17 @@ By default, start build first target.
 
 ## Notes about command execution in MS-DOS.
 
-By default, MAKE start search EXE and COM in current
-directory and in PATH.
+By default, `MAKE` start search EXE and COM in current
+directory and in `PATH`.
 
 If found - run.
 
-If not found (it could be BAT or built-in command like
+If not found (it should be BAT or built-in command like
 COPY or DEL) - try execute
 
      COMMAND.COM /C build_command
 
-(Path to COMMAND.COM will be received from COMSPEC env variable)
+Path to `COMMAND.COM` will be received from `COMSPEC` env variable
 
 
 So, if You wrote "cc mycool.c" it could start
@@ -47,7 +47,7 @@ or
 
      K:\SMALLC22\CC.EXE mycool.c
 
-depends to directory order in PATH.
+depends to directory order in `PATH`.
 
 ## How to build
 
@@ -55,7 +55,7 @@ Just type
 
     make
 
-Must be in PATH:
+Must be in `PATH`:
 
 * Small C 2.2
 * ASM (Small Assembler)
@@ -73,7 +73,7 @@ By default, VAL-linker put 0xFFFF into `max memory` field (in exe-header).
 It is means - DOS will allocate all available memory for programm, when
 start it. It is bad choice, if you want start execute another programm.
 Child process will be crashed with "no memory" error. So, I wrote
-`exesize.exe` - patch for MAKE's exe header, to avoid this problem.
+`exesize.exe` - patch for `MAKE`'s exe header, to avoid this problem.
 
 ## Restrictions
 
