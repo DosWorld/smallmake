@@ -61,8 +61,9 @@ Must be in PATH:
 * UPX (executable file compressor)
 
 Some of this tools you can download for free from
-My Small-C "museum": https://github.com/DosWorld/smallc
-UPX official site: https://upx.github.io/
+
+* My Small-C "museum": https://github.com/DosWorld/smallc
+* UPX official site: https://upx.github.io/
 
 ## Restrictions
 
