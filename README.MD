@@ -1,12 +1,12 @@
 # Make
 
-There is MAKE utility for Small C by J. Hendrix.
+There is MAKE tool for Small C by J. Hendrix.
 Good compiler, but toolchain definitly must be enhanced.
 
 The second reason to recreate this utility - absent
-"make" for DOS real mode (16 bit). DJGPP purpose DPMI tools.
+MAKE for DOS 16-bit (real mode). DJGPP offers just DPMI tools.
 
-This "make" does not support variables.
+This MAKE does not support variables - smallest as possible.
 
 Source code 100% wroten in Small C (with Assembler inlines).
 
@@ -15,6 +15,10 @@ Source code 100% wroten in Small C (with Assembler inlines).
     target1: [dependency1] [.. dependency2]
            [build_command_1]
            [.. build_command_2]
+
+    target2: [dependency2] [.. dependency3]
+           [build_command_x]
+           [.. build_command_z]
 
 By default, start build first target.
 
