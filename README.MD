@@ -56,7 +56,7 @@ Just type
 
 Must be in PATH:
 
-* SmallC 2.2
+* Small C 2.2
 * ASM (Small Assembler)
 * VAL (linker)
 * UPX (executable file compressor)
