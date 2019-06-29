@@ -3,7 +3,7 @@
 There is `MAKE` tool for `Small C by J. Hendrix`.
 Good compiler, but toolchain definitly must be enhanced.
 
-The second reason to recreate this utility - absent
+The second reason to recreate this utility - absent free
 `MAKE` for DOS 16-bit (real mode). DJGPP offers just DPMI-based
 tools.
 
