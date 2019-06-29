@@ -73,7 +73,7 @@ Some of this tools you can download for free from
 * My Small-C "museum": https://github.com/DosWorld/smallc
 * UPX official site: https://upx.github.io/
 
-### Exesize
+### Exesize-workaround
 
 By default, VAL-linker put 0xFFFF into `max memory` field (in exe-header).
 It is means - DOS will allocate all available memory for programm, when
