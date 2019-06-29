@@ -78,7 +78,7 @@ Some of this tools you can download for free from
 By default, VAL-linker put 0xFFFF into `max memory` field (in exe-header).
 It is means - DOS will allocate all available memory for programm, when
 start it. It is bad choice, if you need start execute another child-program.
-Dos could not got free memory for new process and return "no memory"
+DOS could not got free memory for new process and return "no memory"
 error (INT 21h, AX=4B00h will return CF and errcode 8).
 
 So, I wrote `exesize.exe` - patch for `MAKE`'s exe header, to avoid this
