@@ -14,6 +14,8 @@ Source code 100% wroten in Small C (with Assembler inlines).
 
 # Makefile format
 
+Nothing new. This is standart makefile text-file.
+
     target1: [dependency1] [.. dependency2]
            [build_command_1]
            [.. build_command_2]
@@ -22,7 +24,11 @@ Source code 100% wroten in Small C (with Assembler inlines).
            [build_command_x]
            [.. build_command_z]
 
-By default, start build first target.
+By default, `MAKE` start build first target.
+
+Empty lines between targets - optional and not required.
+Diffrence between buid command and targets - build commands
+lines starts from space (or tab).
 
 ## Notes about command execution in MS-DOS.
 
