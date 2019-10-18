@@ -51,7 +51,7 @@ main(argc, argv) int argc, *argv; {
     exeh[0x0d] = 0x0f;
 
     f = fopen(argv[1], "r+");
-    fwrite(f, exeh, sizeof(exeh), 1, f);
+    fwrite(exeh, sizeof(exeh), 1, f);
     fclose(f);
 
     exit(0);
