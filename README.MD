@@ -31,7 +31,7 @@ make - expect SPACE or TAB (one or more).
 By default, `MAKE` start build first target.
 
 Empty lines between targets - optional and not required.
-Diffrence between buid command and targets - build commands
+Diffrence between build command and targets - build commands
 lines starts from spaces (or tabs).
 
 ## Notes about command execution in MS-DOS.
