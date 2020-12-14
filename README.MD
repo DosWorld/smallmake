@@ -24,6 +24,10 @@ Nothing new. This is standart makefile text-file.
            [build_command_x]
            [.. build_command_z]
 
+**Difference with Make from GNU Toolchain (GNU-Make)**:
+GNU-make expect TAB-char before build_command, this
+make - expect SPACE or TAB (one or more).
+
 By default, `MAKE` start build first target.
 
 Empty lines between targets - optional and not required.
