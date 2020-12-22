@@ -36,10 +36,19 @@ int memPtr = 0;
 int targetName[MAX_TARGETS];
 int targetBody[MAX_TARGETS];
 int targetDeps[MAX_TARGETS];
+char targetVisited[MAX_TARGETS];
 int targetPtr = 0;
 
 getTgtCount() {
     return targetPtr;
+}
+
+getTgtVisited(target) int target; {
+        return targetVisited[target];
+}
+
+setTgtVisited(target) int target; {
+        targetVisited[target] = 1;
 }
 
 getTgtName(target) int target; {
@@ -57,16 +66,16 @@ getTgtDeps(target) int target; {
 findTgt(str) char *str; {
     int i;
     for(i = 0; i < targetPtr; i++) {
-	if(!stricmp(str, &mem[targetName[i]])) {
-	    return i;
-	}
+        if(!stricmp(str, &mem[targetName[i]])) {
+            return i;
+        }
     }
     return -1;
 }
 
 addToTgt(line) char *line; {
     if(targetPtr == 0) {
-	return 0;
+        return 0;
     }
     trim(line);
     strcpy(&mem[memPtr-1], line);
@@ -83,28 +92,29 @@ newTgt(line) char *line;{
     ptr = memPtr;
 
     while(isident(*line) || (*line == '.') || (*line == '-')) {
-	mem[memPtr] = *line;
-	memPtr++;
-	line++;
+        mem[memPtr] = *line;
+        memPtr++;
+        line++;
     }
     mem[memPtr] = 0;
     memPtr++;
     while((*line <= ' ') && (*line != 0)) {
-	line++;
+        line++;
     }
     if(*line != ':') {
-	return 0;
+        return 0;
     }
+    targetVisited[targetPtr] = 0;
     targetName[targetPtr] = ptr;
     line++;
     while((*line <= ' ') && (*line != 0)) {
-	line++;
+        line++;
     }
     ptr = memPtr;
     while(*line != 0) {
-	mem[memPtr] = *line;
-	memPtr++;
-	line++;
+        mem[memPtr] = *line;
+        memPtr++;
+        line++;
     }
     mem[memPtr] = 0;
     memPtr++;
