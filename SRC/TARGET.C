@@ -91,7 +91,7 @@ newTgt(line) char *line;{
 
     ptr = memPtr;
 
-    while(isident(*line) || (*line == '.') || (*line == '-')) {
+    while(isident(*line) || (*line == '.') || (*line == '-') || (*line == '/') || (*line == '\\') || (*line == '_')) {
         mem[memPtr] = *line;
         memPtr++;
         line++;

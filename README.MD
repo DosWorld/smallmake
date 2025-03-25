@@ -71,11 +71,13 @@ Must be in `PATH`:
 * ASM (Small Assembler)
 * VAL (linker)
 * UPX (executable file compressor)
+* DWHELP
 
 Some of this tools you can download for free from
 
 * My Small-C "museum": https://github.com/DosWorld/smallc
 * UPX official site: https://upx.github.io/
+* DWHELP https://github.com/DosWorld/dwhelp
 
 ### Exesize-workaround
 
