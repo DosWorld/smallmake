@@ -1,0 +1,122 @@
+!doc smake_index
+Small Make
+
+There is MAKE tool for `Small C by J. Hendrix`. Good compiler, but
+toolchain definitly must be enhanced.
+
+The second reason to recreate this utility - absent free MAKE for DOS 16-bit
+(real mode). DJGPP offers just DPMI-based tools.
+
+This MAKE does not support variables - smallest as possible. MAKE is real
+small - just 5KB on your hard drive!
+
+Source code 100%% wroten in Small C (with Assembler inlines).
+
+!link smake_format Makefile format
+!link smake_build How to build
+
+~Restrictions~
+
+Max target count - 1024
+Max MAKEFILE size - 16KB
+
+!link smake_license License
+
+---
+
+~Notes about command execution in MS-DOS.~
+
+By default, MAKE start search EXE and COM in current directory and in PATH.
+
+If found - run.
+
+If not found (it should be BAT or built-in command like COPY or DEL) - try
+execute
+
+     COMMAND.COM /C build_command
+
+Path to COMMAND.COM will be received from COMSPEC env variable
+
+
+So, if You wrote "cc mycool.c" it could start
+
+     K:\SMALLC20\CC.EXE mycool.c
+
+or
+
+     K:\SMALLC22\CC.EXE mycool.c
+
+depends to directory order in PATH.
+
+!doc smake_license
+License
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
+!doc smake_build
+How to build
+
+Just type
+
+    make
+
+Must be in `PATH`:
+
+* Small C 2.2
+* ASM (Small Assembler)
+* VAL (linker)
+* UPX (executable file compressor)
+* DWHELP
+
+Some of this tools you can download for free from
+
+* My Small-C "museum": https://github.com/DosWorld/smallc
+* UPX official site: https://upx.github.io/
+* DWHELP https://github.com/DosWorld/dwhelp
+
+!doc smake_format
+Makefile format
+
+Nothing new. This is standart makefile text-file.
+
+    target1: [dependency1] [.. dependency2]
+           [build_command_1]
+           [.. build_command_2]
+
+    target2: [dependency2] [.. dependency3]
+           [build_command_x]
+           [.. build_command_z]
+
+~Difference with Make from GNU Toolchain (GNU-Make)~:
+
+GNU-make expect TAB-char before build_command, this
+make - expect SPACE or TAB (one or more).
+
+By default, MAKE start build first target.
+
+Empty lines between targets - optional and not required.
+Diffrence between build command and targets - build commands
+lines starts from spaces (or tabs).
+
