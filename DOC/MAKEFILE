@@ -1,2 +1,0 @@
-make.amb: SRC\index.ama
-	ambpack c SRC make.amb
